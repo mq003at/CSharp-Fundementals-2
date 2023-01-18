@@ -1,0 +1,15 @@
+/Users/alia/Documents/C#/fs13-CSharp_fundamental_2/Assignment/bin/Debug/net6.0/Assignment
+/Users/alia/Documents/C#/fs13-CSharp_fundamental_2/Assignment/bin/Debug/net6.0/Assignment.deps.json
+/Users/alia/Documents/C#/fs13-CSharp_fundamental_2/Assignment/bin/Debug/net6.0/Assignment.runtimeconfig.json
+/Users/alia/Documents/C#/fs13-CSharp_fundamental_2/Assignment/bin/Debug/net6.0/Assignment.dll
+/Users/alia/Documents/C#/fs13-CSharp_fundamental_2/Assignment/bin/Debug/net6.0/Assignment.pdb
+/Users/alia/Documents/C#/fs13-CSharp_fundamental_2/Assignment/obj/Debug/net6.0/Assignment.csproj.AssemblyReference.cache
+/Users/alia/Documents/C#/fs13-CSharp_fundamental_2/Assignment/obj/Debug/net6.0/Assignment.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alia/Documents/C#/fs13-CSharp_fundamental_2/Assignment/obj/Debug/net6.0/Assignment.AssemblyInfoInputs.cache
+/Users/alia/Documents/C#/fs13-CSharp_fundamental_2/Assignment/obj/Debug/net6.0/Assignment.AssemblyInfo.cs
+/Users/alia/Documents/C#/fs13-CSharp_fundamental_2/Assignment/obj/Debug/net6.0/Assignment.csproj.CoreCompileInputs.cache
+/Users/alia/Documents/C#/fs13-CSharp_fundamental_2/Assignment/obj/Debug/net6.0/Assignment.dll
+/Users/alia/Documents/C#/fs13-CSharp_fundamental_2/Assignment/obj/Debug/net6.0/refint/Assignment.dll
+/Users/alia/Documents/C#/fs13-CSharp_fundamental_2/Assignment/obj/Debug/net6.0/Assignment.pdb
+/Users/alia/Documents/C#/fs13-CSharp_fundamental_2/Assignment/obj/Debug/net6.0/Assignment.genruntimeconfig.cache
+/Users/alia/Documents/C#/fs13-CSharp_fundamental_2/Assignment/obj/Debug/net6.0/ref/Assignment.dll
