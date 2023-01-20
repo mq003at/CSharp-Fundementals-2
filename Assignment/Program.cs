@@ -51,13 +51,25 @@
         Demo("hello", 1, 2, "world");
 
         //Challenge 6
-        // var a = "morning";
-        // var b = "people";
-        // SwapTwo(ref a, ref b);
+        Console.WriteLine("\n\nChallenge 6:");
+        object a = "morning";
+        object b = "people";
+        object c = 10;
+        object d = 7;
+        object e = "abc";
+        object f = 3;
+        SwapTwo(ref a, ref b);
+        SwapTwo(ref c, ref d);
+        SwapTwo(ref a, ref e);
+        SwapTwo(ref b, ref c);
+
+        Console.WriteLine($"a: {a}, b: {b}, c: {c}, d: {d}, e: {e}, f: {f}.");
 
         //Challenge 7
         Console.WriteLine("\n\nChallenge 7: ");
-        string firstName, middleName, lastName;
+        string firstName,
+            middleName,
+            lastName;
         ParseNames("Mary Elizabeth Smith", out firstName, out middleName, out lastName);
         Console.WriteLine(
             $"First name: {firstName}, middle name: {middleName}, last name: {lastName}."
@@ -205,46 +217,38 @@
     /* Challenge 6. Write a function to swap 2 objects but only if they are of the same type
     and if they’re string, lengths have to be more than 5.
     If they’re numbers, they have to be more than 18. */
-    static void SwapTwo(params object[] args)
+    static void SwapTwo(ref object a, ref object b)
     {
-        // var objectA = arg[0];
-        // var objectB = arg[1];
 
-        // if (objectA.GetType() != objectB.GetType())
-        // {
-        //     Console.WriteLine($"Object '{objectA}' and '{objectB}' are not from the same type.");
-        // }
-        // else if (objectA is string && objectB is string)
-        // {
-        //     string strA = (string)objectA;
-        //     string strB = (string)objectB;
-
-        //     if (strA.Length < 5 || strB.Length < 5)
-        //     {
-        //         Console.WriteLine("One of the string doesn't meet length requirement.");
-        //         return;
-        //     }
-        //     else
-        //         Swap(ref objectA, ref objectB);
-        // }
-        // else
-        // {
-        //     int intA = (int)objectA;
-        //     int intB = (int)objectB;
-
-        //     if (intA < 18 || intB < 18) {
-        //         Console.WriteLine("Number must be > 18.");
-        //         return;
-        //     } else Swap(intA, intB);
-        // }
-
-        // void Swap(ref object a, ref object b)
-        // {
-        //     object temp = a;
-        //     a = b;
-        //     b = temp;
-        //     Console.WriteLine($"Your object: {a}, {b}.");
-        // }
+        if (a.GetType() != b.GetType())
+        {
+            Console.WriteLine($"{a} and {b} does not have the same type.");
+        }
+        else
+        {
+            if (a is string && b is string)
+            {
+                if (((string)a).Length < 5 || ((string)b).Length < 5)
+                    Console.WriteLine($"One of the variable doesn't meet length requirement (length > 5).");
+                else
+                {
+                    object temp = a;
+                    a = b;
+                    b = temp;
+                }
+            }
+            else if (a is int && b is int)
+            {
+                if (Convert.ToInt32(a) < 18 || Convert.ToInt32(b) < 18)
+                    Console.WriteLine($"One of the variable doesn't meet amount requirement (>18).");
+                else
+                {
+                    object temp = a;
+                    a = b;
+                    b = temp;
+                }
+            } else Console.WriteLine("Unsupport type.");
+        }
     }
 
     /* Challenge 7. Write a function to parse the first name, middle name, last name given a string.
@@ -254,7 +258,8 @@
         out string firstName,
         out string middleName,
         out string lastName
-    ) { 
+    )
+    {
         string[] stringArr = input.Split(" ");
         firstName = stringArr[0];
         middleName = stringArr[1];
@@ -265,18 +270,23 @@
     The function will think of a random integer number (lets say within 100)
     and ask the user to input a guess.
     It’ll repeat the asking until the user puts the correct answer. */
-    static void GuessingGame() {
+    static void GuessingGame()
+    {
         Console.WriteLine("\n\nChallenge 8:");
         Random random = new Random();
         int number = random.Next(1, 101);
         int guess;
 
-        do {
+        do
+        {
             Console.Write("Guess number: ");
             guess = int.Parse(Console.ReadLine());
-            if (guess < number) Console.WriteLine("You guess too low! Aim higher.");
-            else if (guess > number) Console.WriteLine("You guess too high! Aim lower.");
-            else Console.WriteLine($"Correct! The random number is {number}.");
+            if (guess < number)
+                Console.WriteLine("You guess too low! Aim higher.");
+            else if (guess > number)
+                Console.WriteLine("You guess too high! Aim lower.");
+            else
+                Console.WriteLine($"Correct! The random number is {number}.");
         } while (guess != number);
     }
 }
